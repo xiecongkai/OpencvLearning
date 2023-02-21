@@ -1,6 +1,6 @@
 #ifndef QUICKOPENCV_H
 #define QUICKOPENCV_H
-#include <QObject>
+
 #include <QMainWindow>
 #include <opencv2/opencv.hpp>
 
@@ -10,5 +10,6 @@ class QuickDemo : public QObject{
     Q_OBJECT
     public:
         void colorSpace_Demo(Mat &image);
+        void mat_creation_demo(Mat &image);
 };
 #endif // QUICKOPENCV_H
