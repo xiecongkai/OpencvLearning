@@ -235,6 +235,7 @@ DIST          = /opt/Qt5.12.6/5.12.6/gcc_64/mkspecs/features/spec_pre.prf \
 		/opt/Qt5.12.6/5.12.6/gcc_64/mkspecs/features/qt_config.prf \
 		/opt/Qt5.12.6/5.12.6/gcc_64/mkspecs/linux-g++/qmake.conf \
 		/opt/Qt5.12.6/5.12.6/gcc_64/mkspecs/features/spec_post.prf \
+		../demo001/.qmake.stash \
 		/opt/Qt5.12.6/5.12.6/gcc_64/mkspecs/features/exclusive_builds.prf \
 		/opt/Qt5.12.6/5.12.6/gcc_64/mkspecs/features/toolchain.prf \
 		/opt/Qt5.12.6/5.12.6/gcc_64/mkspecs/features/default_pre.prf \
@@ -443,6 +444,7 @@ Makefile: ../demo001/demo001.pro /opt/Qt5.12.6/5.12.6/gcc_64/mkspecs/linux-g++/q
 		/opt/Qt5.12.6/5.12.6/gcc_64/mkspecs/features/qt_config.prf \
 		/opt/Qt5.12.6/5.12.6/gcc_64/mkspecs/linux-g++/qmake.conf \
 		/opt/Qt5.12.6/5.12.6/gcc_64/mkspecs/features/spec_post.prf \
+		.qmake.stash \
 		/opt/Qt5.12.6/5.12.6/gcc_64/mkspecs/features/exclusive_builds.prf \
 		/opt/Qt5.12.6/5.12.6/gcc_64/mkspecs/features/toolchain.prf \
 		/opt/Qt5.12.6/5.12.6/gcc_64/mkspecs/features/default_pre.prf \
@@ -638,6 +640,7 @@ Makefile: ../demo001/demo001.pro /opt/Qt5.12.6/5.12.6/gcc_64/mkspecs/linux-g++/q
 /opt/Qt5.12.6/5.12.6/gcc_64/mkspecs/features/qt_config.prf:
 /opt/Qt5.12.6/5.12.6/gcc_64/mkspecs/linux-g++/qmake.conf:
 /opt/Qt5.12.6/5.12.6/gcc_64/mkspecs/features/spec_post.prf:
+.qmake.stash:
 /opt/Qt5.12.6/5.12.6/gcc_64/mkspecs/features/exclusive_builds.prf:
 /opt/Qt5.12.6/5.12.6/gcc_64/mkspecs/features/toolchain.prf:
 /opt/Qt5.12.6/5.12.6/gcc_64/mkspecs/features/default_pre.prf:
@@ -1180,6 +1183,22 @@ mainwindow.o: ../demo001/mainwindow.cpp ../demo001/mainwindow.h \
 		/opt/Qt5.12.6/5.12.6/gcc_64/include/QtWidgets/qtabwidget.h \
 		/opt/Qt5.12.6/5.12.6/gcc_64/include/QtGui/qicon.h \
 		ui_mainwindow.h \
+		/opt/Qt5.12.6/5.12.6/gcc_64/include/QtCore/QVariant \
+		/opt/Qt5.12.6/5.12.6/gcc_64/include/QtWidgets/QApplication \
+		/opt/Qt5.12.6/5.12.6/gcc_64/include/QtWidgets/qapplication.h \
+		/opt/Qt5.12.6/5.12.6/gcc_64/include/QtCore/qcoreapplication.h \
+		/opt/Qt5.12.6/5.12.6/gcc_64/include/QtCore/qeventloop.h \
+		/opt/Qt5.12.6/5.12.6/gcc_64/include/QtWidgets/qdesktopwidget.h \
+		/opt/Qt5.12.6/5.12.6/gcc_64/include/QtGui/qguiapplication.h \
+		/opt/Qt5.12.6/5.12.6/gcc_64/include/QtGui/qinputmethod.h \
+		/opt/Qt5.12.6/5.12.6/gcc_64/include/QtWidgets/QMenuBar \
+		/opt/Qt5.12.6/5.12.6/gcc_64/include/QtWidgets/qmenubar.h \
+		/opt/Qt5.12.6/5.12.6/gcc_64/include/QtWidgets/qmenu.h \
+		/opt/Qt5.12.6/5.12.6/gcc_64/include/QtWidgets/qaction.h \
+		/opt/Qt5.12.6/5.12.6/gcc_64/include/QtWidgets/qactiongroup.h \
+		/opt/Qt5.12.6/5.12.6/gcc_64/include/QtWidgets/QStatusBar \
+		/opt/Qt5.12.6/5.12.6/gcc_64/include/QtWidgets/qstatusbar.h \
+		/opt/Qt5.12.6/5.12.6/gcc_64/include/QtWidgets/QWidget \
 		../demo001/quickopencv.h \
 		/opt/Qt5.12.6/5.12.6/gcc_64/include/QtCore/QObject
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o mainwindow.o ../demo001/mainwindow.cpp
