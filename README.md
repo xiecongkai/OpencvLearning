@@ -14,4 +14,8 @@ Demo01
 
 第三节:
 C++中Mat对象与创建；
+image.clone; image.copyTo;
+Mat::ones;
+Mat::zeros;
+Scalar;
   
