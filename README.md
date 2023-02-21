@@ -11,4 +11,7 @@ Demo01
 第二节:
 了解函数：imread; imshow; imwrite; cvtColor; namedWindow 函数的使用方法。
 掌握使用qt创建头文件和源文件；
+
+第三节:
+C++中Mat对象与创建；
   
