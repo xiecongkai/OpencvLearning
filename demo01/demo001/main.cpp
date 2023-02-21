@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
     imshow("输入窗口",src);
 
     QuickDemo qd;
-    qd.colorSpace_Demo(src);
+    qd.mat_creation_demo(src);
 
     waitKey(0);
 
