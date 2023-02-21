@@ -17,7 +17,14 @@ void QuickDemo::mat_creation_demo(Mat &image){
     image.copyTo(m2);
 
     //创建空白图像
-    Mat m3 = Mat::zeros(Size(8,8),CV_8UC1);
-    std::cout<<"width:"<<m3.cols<<"height:"<<m3.rows<<"channels:"<<m3.channels()<<std::endl;
-    std::cout<<m3<<std::endl;
+    Mat m3 = Mat::zeros(Size(400,400),CV_8UC3);
+    m3 = Scalar(0,0,255);
+    std::cout<<"width:"<<m3.cols<<" height:"<<m3.rows<<" channels:"<<m3.channels()<<std::endl;
+//    std::cout<<m3<<std::endl;
+    imshow("M3",m3);
+
+    Mat m4 = m3;
+    m4 = Scalar(0,255,255);
+    imshow("M4",m4);
+
 }
