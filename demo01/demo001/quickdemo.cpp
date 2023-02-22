@@ -32,22 +32,45 @@ void QuickDemo::pixel_visit_demo(Mat &image){
     int w = image.cols;
     int h = image.rows;
     int dims = image.channels();
+
+    //第一种方法
+//    for(int row=0;row<h;row++)
+//    {
+//        for(int col=0;col<w;col++)
+//        {
+//           if(dims == 1) //灰度图像
+//           {
+//                int pv = image.at<uchar>(row,col);
+//                image.at<uchar>(row,col)= 255 - pv;
+//           }
+//           if(dims == 3)  //彩色图像
+//           {
+//               Vec3b bgr = image.at<Vec3b>(row,col);
+//               image.at<Vec3b>(row,col)[0] = 255 - bgr[0];
+//               image.at<Vec3b>(row,col)[1] = 255 - bgr[1];
+//               image.at<Vec3b>(row,col)[2] = 255 - bgr[2];
+//           }
+//        }
+//    }
+
+    //第二种方法
     for(int row=0;row<h;row++)
     {
+        uchar* current_row = image.ptr<uchar>(row);
         for(int col=0;col<w;col++)
         {
            if(dims == 1) //灰度图像
            {
-                int pv = image.at<uchar>(row,col);
-                image.at<uchar>(row,col)= 255 - pv;
+                int pv = *current_row;
+                *current_row++= 255 - pv;
            }
            if(dims == 3)  //彩色图像
            {
-               Vec3b bgr = image.at<Vec3b>(row,col);
-               image.at<Vec3b>(row,col)[0] = 255 - bgr[0];
-               image.at<Vec3b>(row,col)[1] = 255 - bgr[1];
-               image.at<Vec3b>(row,col)[2] = 255 - bgr[2];
+               *current_row++ = 255 - *current_row;
+               *current_row++ = 255 - *current_row;
+               *current_row++ = 255 - *current_row;
            }
         }
     }
+    imshow("输入图像",image);
 }
