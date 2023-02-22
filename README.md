@@ -20,5 +20,7 @@ Mat::zeros;
 Scalar;
   
 第四节:
-
 图像的读写操作;
+image.cols; image.rows; image.channels; 
+image.at<uchar>(row,col);
+
