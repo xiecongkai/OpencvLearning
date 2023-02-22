@@ -11,5 +11,6 @@ class QuickDemo : public QObject{
     public:
         void colorSpace_Demo(Mat &image);
         void mat_creation_demo(Mat &image);
+        void pixel_visit_demo(Mat &image);
 };
 #endif // QUICKOPENCV_H
