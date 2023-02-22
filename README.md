@@ -23,4 +23,8 @@ Scalar;
 图像的读写操作;
 image.cols; image.rows; image.channels; 
 image.at<uchar>(row,col);
+image.at<Vec3b>(row,col);
+
+第五节:
+图像像素的算术操作；
 
