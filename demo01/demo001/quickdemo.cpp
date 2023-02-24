@@ -74,3 +74,29 @@ void QuickDemo::pixel_visit_demo(Mat &image){
     }
     imshow("输入图像",image);
 }
+
+void QuickDemo::operators_demo(Mat &image)
+{
+    Mat dst;
+    Mat m = Mat::zeros(image.size(),image.type());
+    m = Scalar(2,2,2);
+    multiply(image,m,dst);
+    imshow("加法操作",dst);
+
+
+    int w = image.cols;
+    int h = image.rows;
+    int dims = image.channels();
+        for(int row=0;row<h;row++)
+        {
+
+               if(dims == 3)  //彩色图像
+               {
+                   Vec3b bgr = image.at<Vec3b>(row,col);
+                   image.at<Vec3b>(row,col)[0] = 255 - bgr[0];
+                   image.at<Vec3b>(row,col)[1] = 255 - bgr[1];
+                   image.at<Vec3b>(row,col)[2] = 255 - bgr[2];
+               }
+            }
+        }
+}
