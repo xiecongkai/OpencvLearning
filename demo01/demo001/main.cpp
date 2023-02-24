@@ -14,7 +14,7 @@ int main(int argc, char *argv[])
     MainWindow w;
     w.show();
 
-    Mat src =imread("/home/diana/opencv_qt/demo01/Debug/1234/test.png");
+    Mat src =imread("/home/diana/GitHub/OpencvLearning/demo01/Debug/1234/001.jpg");
     if(src.empty()){
         qDebug("could not load image...");
         return -1;
@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
     imshow("输入窗口",src);
 
     QuickDemo qd;
-    qd.pixel_visit_demo(src);
+    qd.operators_demo(src);
 
     waitKey(0);
 
